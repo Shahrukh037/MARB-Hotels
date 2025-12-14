@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MARB Hotels | Book Verified Stays</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header class="fade-down">
+  <h1>MARB Hotels</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#hotels">Hotels</a>
+    <a href="#partner">Partner</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero fade-up">
+  <h2>Book Verified & Comfortable Stays</h2>
+  <p>Trusted partner hotels • Clean rooms • Transparent pricing</p>
+  <a class="btn" href="#hotels">Explore Hotels</a>
+</section>
+
+<section id="hotels" class="section">
+  <h2 class="center">Available Hotels</h2>
+
+  <div class="grid">
+    <div class="card zoom">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" alt="">
+      <h3>MARB Residency</h3>
+      <p>📍 Lucknow</p>
+      <p>₹1499 / night</p>
+      <button onclick="openBooking('MARB Residency')">Book Room</button>
+    </div>
+
+    <div class="card zoom">
+      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" alt="">
+      <h3>MARB Comfort Inn</h3>
+      <p>📍 Delhi</p>
+      <p>₹1899 / night</p>
+      <button onclick="openBooking('MARB Comfort Inn')">Book Room</button>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING POPUP -->
+<div id="bookingModal" class="modal">
+  <div class="modal-box slide-up">
+    <span class="close" onclick="closeBooking()">×</span>
+    <h2>Book Room</h2>
+
+    <!-- WHATSAPP BOOKING FORM -->
+    <form id="bookingForm">
+      <input type="hidden" id="hotelName">
+
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <input type="date" id="checkin" required>
+      <input type="date" id="checkout" required>
+
+      <button type="submit">Confirm on WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<section id="partner" class="section alt">
+  <h2>Partner With MARB Hotels</h2>
+  <p>List your hotel & use MARB brand to increase bookings.</p>
+  <a class="btn dark" href="#contact">Apply Now</a>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>Email: contact@marbhotels.com</p>
+  <p class="note">MARB Hotels is a brand-licensing & listing platform.</p>
+</section>
+
+<footer>
+  <p>© 2025 MARB Hotels</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
